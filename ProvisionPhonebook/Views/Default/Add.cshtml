@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    label{width:100px;
+          display:inline-block
+    }
+</style>
+<form method="post" class="form-group">
+
+    <label for="fname">Ad :</label>
+    <input type="text" id="fname" name="KisiAd"><br><br>
+    <label for="lname">Soyad :</label>
+    <input type="text" id="lname" name="KisiSoyad"><br><br>
+
+    <label for="tel">Telefon :</label>
+    <input type="tel" id="phone" name="KisiTel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required><br>
+    <small>Örnek: 1234567890</small><br><br>
+    <label>Telefon Türü :</label>
+    <select  name="KisiTelTip">
+        <option value="Mobil">Mobil</option>
+        <option value="İş">İş</option>
+        <option value="Ev">Ev</option>
+        <option value="Özel">Özel</option>
+    </select>
+
+
+    <button class="btn btn-success">Kişi Ekle </button>
+
+</form>
+

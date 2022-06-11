@@ -1,0 +1,43 @@
+﻿@model ProvisionPhonebook.Models.EntityFramework.TblKisi
+@{
+    ViewBag.Title = "Bring";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    label {
+        width: 100px;
+        display: inline-block
+    }
+</style>
+@using (Html.BeginForm("Update", "Default", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(k => k.KisiID )
+        @Html.TextBoxFor(k => k.KisiID)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(k => k.KisiAd)
+        @Html.TextBoxFor(k => k.KisiAd)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(k => k.KisiSoyad)
+        @Html.TextBoxFor(k => k.KisiSoyad)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(k => k.KisiTel)
+        @Html.TextBoxFor(k => k.KisiTel)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(k => k.KisiTelTip)
+        <select name="KisiTelTip">
+            <option value="Mobil">Mobil</option>
+            <option value="İş">İş</option>
+            <option value="Ev">Ev</option>
+            <option value="Özel">Özel</option>
+        </select>
+    </div>
+    @Html.HiddenFor(k => k.KisiID)
+    <div style="margin-top:10px">
+        <button class="btn btn-info">Güncelle</button>
+    </div>
+}
